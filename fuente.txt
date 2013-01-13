@@ -1,0 +1,5 @@
+input ('ingrese un valor:', a1);
+ if a1 <= 100 then
+    print ("ganaste");
+ else
+     print ("perdiste");

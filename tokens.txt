@@ -1,0 +1,6 @@
+input
+print
+if
+else
+then
+<=

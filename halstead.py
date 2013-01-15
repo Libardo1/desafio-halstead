@@ -8,16 +8,11 @@ with open(sys.argv[1], 'r') as f:
 with open(sys.argv[2], 'r') as f:
     fuente = f.read()
 
-n1data = [re.findall(t, fuente) for t in tokens]
-n1data = sum(n1data, [])
+n1data = sum([re.findall(re.escape(t), fuente) for t in tokens], [])
 n1, N1 = len(set(n1data)), len(n1data)
 
-# print (n1data)
-
-n2data = [i for i in
-       re.findall(
-       '".*"|\'.*\'|[a-zA-Z0-9]*', fuente)
-       if i != '' and i not in tokens]
+n2data = [i for i in re.findall('".*"|\'.*\'|\\b\\w+\\b', fuente)
+            if i != '' and i not in tokens]
 n2, N2 = len(set(n2data)), len(n2data)
 
 N, n = N1 + N2 , n1 + n2

@@ -7,7 +7,7 @@ tokens = open(sys.argv[1], 'r').read().split()
 
 fuente = open(sys.argv[2], 'r').read()
 
-n1data = sum([re.findall(r"(?:(?<=[ \t\n\r\v])|(?<=\A))%s(?=[ \t\n\r\v]|\Z)" %
+n1data = sum([re.findall(r"(?:(?<=[ \t\n\r\v])|(?<=\A))%s(?=[\(\[\{ \t\n\r\v]|\Z)" %
              re.escape(t), fuente) for t in tokens], [])
 n1, N1 = len(set(n1data)), len(n1data)
 

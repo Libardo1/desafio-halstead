@@ -14,15 +14,15 @@ T = 8.994522<br/>
 <br/><br/><br/>
 ****
 $ python3 halstead.py tokens.txt halstead.py<br/>
-n1 = 3 {'print', 'in', 'if'}<br/>
-N1 = 5 ['print', 'if', 'in', 'in', 'in']<br/>
-n2 = 44 {'and', 'set', '"n1 = %d %s\\nN1 = %d %s\\nn2 = %d %s\\nN2 = %d %s\\n\\nN = %f\\nn = %f\\nV = %f\\nD = %f\\nL = %f\\nE = %f\\nT = %f"', 'fuente', "''", 'escape', 'open', 'findall', '"(?:(?<=[ \\t\\n\\r\\v])|(?<=\\A))%s(?=[\\(\\[\\{ \\t\\n\\r\\v]|\\Z)"', 'from', 'log', 'for', 're', 'sum', 'n1data', '1', "'r'", '2', 'split', 'import', 'math', 'E', 'D', 'read', 'L', 'argv', 'N', 'tokens', 'len', 'n2data', 'V', 'not', 'N1', 'N2', '\'".*"|\\\'.*\\\'|\\\\b\\\\w+\\\\b\'', 'sys', 'i', '18', 'n', 'r', 't', 'n1', 'n2', 'T'}<br/>
-N2 = 107 ['import', 'sys', 'import', 're', 'from', 'math', 'import', 'log', 'tokens', 'open', 'sys', 'argv', '1', "'r'", 'read', 'split', 'fuente', 'open', 'sys', 'argv', '2', "'r'", 'read', 'n1data', 'sum', 're', 'findall', 'r', '"(?:(?<=[ \\t\\n\\r\\v])|(?<=\\A))%s(?=[\\(\\[\\{ \\t\\n\\r\\v]|\\Z)"', 're', 'escape', 't', 'fuente', 'for', 't', 'tokens', 'n1', 'N1', 'len', 'set', 'n1data', 'len', 'n1data', 'n2data', 'i', 'for', 'i', 're', 'findall', '\'".*"|\\\'.*\\\'|\\\\b\\\\w+\\\\b\'', 'fuente', 'i', "''", 'and', 'i', 'not', 'tokens', 'n2', 'N2', 'len', 'set', 'n2data', 'len', 'n2data', 'N', 'n', 'N1', 'N2', 'n1', 'n2', 'V', 'D', 'N', 'log', 'n', '2', 'n1', '2', 'N2', 'n2', 'L', 'E', '1', 'D', 'V', 'D', 'T', 'E', '18', '"n1 = %d %s\\nN1 = %d %s\\nn2 = %d %s\\nN2 = %d %s\\n\\nN = %f\\nn = %f\\nV = %f\\nD = %f\\nL = %f\\nE = %f\\nT = %f"', 'n1', 'set', 'n1data', 'N1', 'n1data', 'n2', 'set', 'n2data', 'N2', 'n2data', 'N', 'n', 'V', 'D', 'L', 'E', 'T']<br/>
-<br/>
-N = 112.000000<br/>
-n = 47.000000<br/>
-V = 622.113951<br/>
-D = 3.647727<br/>
-L = 0.274143<br/>
-E = 2269.302027<br/>
-T = 126.072335<br/>
+n1 = 11 {'=', 'for', 'and', '/', 'if', '+', '*', 'not', 'import', 'in', '%'}
+N1 = 40 ['if', 'for', 'for', 'in', 'in', 'in', 'import', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '=', '/', '/', '/', '/', '*', '*', '*', '+', '+', 'and', 'not', 'not', '%', '%']
+n2 = 39 {'math', 'len', 'n1data', 'read', 't', 'r', 'n', 'i', 'log', 'open', 'is', 'V', 'T', 'N', 'L', 'n2', 'n1', 'escape', 'E', 'D', 'set', 're', '\'".*"|\\\'.*\\\'|\\\\b\\\\w+\\\\b\', open(sys.argv[2], \'r\'', '2', '1', 'sum', 'print', 'N1', 'sys', '"(?:(?<=[ \\t\\n\\r\\v])|(?<=\\A))%s(?=[\\(\\[\\{ \\t\\n\\r\\v]|\\Z)"', '18', 'n2data', 'split', "'r').read()) for t in open(sys.argv[1], 'r'", 'argv', 'findall', "'' and i not in open(sys.argv[1], 'r'", 'N2', '"n1 = %d %s\\nN1 = %d %s\\nn2 = %d %s\\nN2 = %d %s\\n\\nN = %f\\nn = %f\\nV = %f\\nD = %f\\nL = %f\\nE = %f\\nT = %f"'}
+N2 = 90 ['sys', 're', 'math', 'n1data', 'sum', 're', 'findall', 'r', '"(?:(?<=[ \\t\\n\\r\\v])|(?<=\\A))%s(?=[\\(\\[\\{ \\t\\n\\r\\v]|\\Z)"', 're', 'escape', 't', 'open', 'sys', 'argv', '2', "'r').read()) for t in open(sys.argv[1], 'r'", 'read', 'split', 'n1', 'N1', 'len', 'set', 'n1data', 'len', 'n1data', 'n2data', 'i', 'i', 're', 'findall', '\'".*"|\\\'.*\\\'|\\\\b\\\\w+\\\\b\', open(sys.argv[2], \'r\'', 'read', 'i', 'is', "'' and i not in open(sys.argv[1], 'r'", 'read', 'split', 'n2', 'N2', 'len', 'set', 'n2data', 'len', 'n2data', 'N', 'n', 'N1', 'N2', 'n1', 'n2', 'V', 'D', 'N', 'math', 'log', 'n', '2', 'n1', '2', 'N2', 'n2', 'L', 'E', '1', 'D', 'V', 'D', 'T', 'E', '18', 'print', '"n1 = %d %s\\nN1 = %d %s\\nn2 = %d %s\\nN2 = %d %s\\n\\nN = %f\\nn = %f\\nV = %f\\nD = %f\\nL = %f\\nE = %f\\nT = %f"', 'n1', 'set', 'n1data', 'N1', 'n1data', 'n2', 'set', 'n2data', 'N2', 'n2data', 'N', 'n', 'V', 'D', 'L', 'E', 'T']
+
+N = 130.000000
+n = 50.000000
+V = 733.701305
+D = 12.692308
+L = 0.078788
+E = 9312.362713
+T = 517.353484

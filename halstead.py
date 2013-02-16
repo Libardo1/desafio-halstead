@@ -1,29 +1,26 @@
 import sys, re, math
 
-
 def getRegexpMatch(regexp, string):
     data = re.findall(regexp, string)
     string = re.sub(regexp, ' ', string)
     return data, string
+
 
 tokens, fuente = open(
     sys.argv[1], 'r').read().split(), open(sys.argv[2], "r").read()
 tokens.sort(key=lambda s: 1 / len(s))
 
 
-strings, fuente = getRegexpMatch(
+n2data, fuente = getRegexpMatch(
     r"\'([^\"\'\\]*(?:\\.[^\"\'\\]*)*)\'|\"([^\"\'\\]*(?:\\.[^\"\'\\]*)*)\"", fuente)
 
-special = [re.escape(t) for t in ". , ; : ? ! [ ] ( ) { }".split(' ')]
-fuente = re.sub('|'.join(special), " ", fuente)
+fuente = re.sub('|'.join([re.escape(
+    i) for i in ". , ; : ? ! [ ] ( ) { }".split(' ') if i not in tokens]), " ", fuente)
 
-n2data = []
 for i in re.findall('\\w+', fuente):
     if i not in tokens:
         data, fuente = getRegexpMatch(r'(?:\b)%s(?:\b)' % re.escape(i), fuente)
         n2data = n2data + data
-
-n2data = n2data + strings
 
 n1data = []
 for i in tokens:
